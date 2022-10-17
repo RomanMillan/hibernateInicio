@@ -28,5 +28,22 @@ public class pruebaDAO {
 		prueba p = (prueba) session.get(prueba.class,id);
 		System.out.println("El nombre es: " + p.getNombre());
 	}
+	
+	//metodo que borra
+	public void delete(int id) {
+		prueba p = (prueba) session.get(prueba.class,id);
+		session.getTransaction().begin();
+		session.delete(p);
+		session.getTransaction().commit();
+	}
+	
+	//metodo que modifica
+	public void update(int id,String newName) {
+		prueba p = (prueba) session.get(prueba.class,id);
+		p.setNombre(newName);
+		session.getTransaction().begin();
+		session.update(p);
+		session.getTransaction().commit();
+	}
 
 }

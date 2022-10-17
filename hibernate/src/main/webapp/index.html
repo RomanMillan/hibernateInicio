@@ -1,22 +1,37 @@
 <!DOCTYPE html>
 <html>
-<head>
-<meta charset="UTF-8">
-<title>Insert title here</title>
-</head>
-<body>
-	<form action="prueba.jsp">
-	<label>Id: </label>
-	<input type="number" name="id">
-		<label>Nombre:</label>
-		<input type="text" name="nombre">
-		<button>Enviar</button>
-	</form>
-	<form action="prueba.jsp">
-		<label>Id: </label>
-		<input type="number" name="id">
-		<button>Mostrar</button>
-	</form>
-	
-</body>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<h2>Añadir</h2>
+		<form action="prueba.jsp">
+			<input type="number" name="id" placeholder="ID">
+			<br>
+			<input type="text" name="nombre" placeholder="Nombre">
+			<button>Enviar</button>
+		</form>
+		
+		<h2>Mostrar</h2>
+		<form action="prueba.jsp">
+			<input type="number" name="id" placeholder="ID">
+			<button>Mostrar</button>
+		</form>
+		
+		<h2>Borrar</h2>
+		<form action="borrar.jsp">
+			<input type="number" name="id" placeholder="ID">
+			<button>Borrar</button>
+		</form>
+		
+		<h2>Modificar</h2>
+		<form action="update.jsp">
+			<input type="number" name="id" placeholder="ID">
+			<br>
+			<input type="text" name="nombre" placeholder="Nuevo nombre">
+			<button>Modificar</button>
+		</form>
+		
+	</body>
 </html>
