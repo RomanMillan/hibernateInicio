@@ -16,4 +16,17 @@ public class pruebaDAO {
 		session = sf.openSession();
 	}
 
+	//metodo que añade el nombre
+	public void add(prueba p) {
+		session.getTransaction().begin();
+		session.save(p);
+		session.getTransaction().commit();
+	}
+	
+	//metodo que lee el nombre
+	public void read(int id) {
+		prueba p = (prueba) session.get(prueba.class,id);
+		System.out.println("El nombre es: " + p.getNombre());
+	}
+
 }

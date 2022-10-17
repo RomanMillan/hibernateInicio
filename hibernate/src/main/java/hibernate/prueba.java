@@ -2,21 +2,32 @@ package hibernate;
 
 import java.util.Objects;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.Table;
 
 @Entity
+@Table(name="prueba")
 public class prueba {
 	@Id
 	private int id;
+	@Column(name="nombre")
 	private String nombre;
 	
 	//constructor
+	public prueba(String nombre, int id) {
+		super();
+		this.id = id;
+		this.nombre = nombre;
+	}
+	
 	public prueba() {
 		super();
-		this.id = 1;
+		this.id = -1;
 		this.nombre = null;
 	}
+	
 	
 	//getter and setter
 	public int getId() {
